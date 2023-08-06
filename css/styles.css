@@ -21,6 +21,54 @@ body {
   letter-spacing: 0.02em;
 }
 
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.container {
+  max-width: 1158px;
+  /* width from maket + paddings */
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /* centify container's content */
+}
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-cornflower);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
 .list {
   list-style: none;
 }
@@ -31,7 +79,53 @@ body {
 
 /* Page Studio */
 
-.header-nav__logo-blue {
+.header-nav_list {
+  display: flex;
+  column-gap: 40px;
+}
+
+.header-contacts_list {
+  display: flex;
+  column-gap: 40px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.company_list {
+  display: flex;
+  column-gap: 24px;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.works_list {
+  display: flex;
+  column-gap: 24px;
+  margin-top: 72px;
+  margin-bottom: 120px;
+}
+
+.team_list {
+  display: flex;
+  column-gap: 24px;
+  margin-top: 72px;
+  margin-bottom: 120px;
+}
+
+.header-nav_logo-blue {
+  display: flex;
+  align-items: center;
   color: var(--color-iris);
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -39,9 +133,12 @@ body {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-right: 76px;
 }
 
-.header-nav__logo-black {
+.header-nav_logo-black {
+  display: flex;
+  align-items: center;
   color: var(--color-navy-blue);
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -51,46 +148,49 @@ body {
   text-transform: uppercase;
 }
 
-.header-nav__link {
+.header-nav_link {
   color: var(--color-navy-blue);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
 }
 
-.header-nav__link:hover,
-.header-nav__link:focus {
+.header-nav_link:hover,
+.header-nav_link:focus {
   color: var(--color-ocean);
 }
 
 .header-contacts {
+  display: flex;
   font-style: normal;
 }
 
-.header-contacts__link {
+.header-contacts_link {
   color: var(--color-slate);
   font-size: 16px;
   line-height: 1.5;
 }
 
-.header-contacts__link:hover,
-.header-contacts__link:focus {
+.header-contacts_link:hover,
+.header-contacts_link:focus {
   color: var(--color-ocean);
 }
 
 .hero {
   background-color: var(--color-navy-blue);
+  padding: 188px 0;
 }
 
-.hero__title {
+.hero_title {
   color: var(--color-white);
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
+  margin-bottom: 48px;
 }
 
-.hero__button {
+.hero_button {
   color: var(--color-white);
   background-color: var(--color-iris);
   font-family: 'Roboto', sans-serif;
@@ -99,14 +199,17 @@ body {
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
 }
 
-.hero__button:hover,
-.hero__button:focus {
+.hero_button:hover,
+.hero_button:focus {
   background-color: var(--color-ocean);
 }
 
-.company__title {
+.company_title {
   color: var(--color-navy-blue);
   font-weight: 500;
   font-size: 20px;
@@ -114,13 +217,13 @@ body {
   letter-spacing: 0.02em;
 }
 
-.company__text {
+.company_text {
   color: var(--color-slate);
   font-size: 16px;
   line-height: 1.5;
 }
 
-.works__title {
+.works_title {
   color: var(--color-navy-blue);
   font-size: 36px;
   line-height: 1.11;
@@ -130,9 +233,10 @@ body {
 
 .team {
   background-color: var(--color-cloud);
+  padding: 120px 0;
 }
 
-.team__title {
+.team_title {
   color: var(--color-navy-blue);
   font-size: 36px;
   line-height: 1.11;
@@ -141,29 +245,41 @@ body {
   text-transform: capitalize;
 }
 
-.team__item {
+.team_item {
   background-color: var(--color-white);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 
-.team__specialist {
+.team_wrapper {
+  padding: 32px 0;
+}
+
+.team_specialist {
   color: var(--color-navy-blue);
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
-.team__job-title {
+.team_job-title {
   color: var(--color-slate);
   font-size: 16px;
   line-height: 1.5;
+  text-align: center;
 }
 
 .footer {
   background-color: var(--color-navy-blue);
+  padding: 100px 0;
 }
 
-.footer__logo-blue {
+.footer_logo-blue {
   color: var(--color-iris);
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -173,7 +289,7 @@ body {
   text-transform: uppercase;
 }
 
-.footer__logo-white {
+.footer_logo-white {
   color: var(--color-cloud);
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -183,15 +299,27 @@ body {
   text-transform: uppercase;
 }
 
-.footer__text {
+.footer_text {
   color: var(--color-cloud);
   font-size: 16px;
   line-height: 1.5;
+  margin-top: 16px;
 }
 
 /* Page Portfolio */
 
-.gallery-filter__button {
+.gallery {
+  padding: 96px 0 120px;
+}
+
+.gallery-filter_list {
+  display: flex;
+  column-gap: 24px;
+  justify-content: center;
+  margin-bottom: 72px;
+}
+
+.gallery-filter_button {
   color: var(--color-iris);
   background-color: var(--color-cloud);
   font-family: 'Roboto', sans-serif;
@@ -200,15 +328,30 @@ body {
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
+  border: 1px solid var(--color-cornflower);
+  border-radius: 4px;
+  padding: 12px 24px 12px 24px;
 }
 
-.gallery-filter__button:hover,
-.gallery-filter__button:focus {
+.gallery-filter_button:hover,
+.gallery-filter_button:focus {
   color: var(--color-white);
   background-color: var(--color-ocean);
 }
 
-.gallery__title {
+.gallery_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+}
+
+.gallary-wrapper {
+  border: 1px solid var(--color-cornflower);
+  border-top: none;
+  padding: 32px 16px;
+}
+
+.gallery_title {
   color: var(--color-navy-blue);
   font-weight: 500;
   font-size: 20px;
@@ -216,7 +359,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-.gallery__text {
+.gallery_text {
   color: var(--color-slate);
   font-size: 16px;
   line-height: 1.5;
