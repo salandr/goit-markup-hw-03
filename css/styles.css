@@ -44,7 +44,7 @@ ol {
 }
 
 .container {
-  max-width: 1158px;
+  width: 1158px;
   /* width from maket + paddings */
   padding-left: 15px;
   padding-right: 15px;
