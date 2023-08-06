@@ -54,8 +54,7 @@ ol {
 }
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  display: flex;
   border-bottom: 1px solid var(--color-cornflower);
 }
 
@@ -127,6 +126,7 @@ ol {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  display: inline-block;
   margin-right: 76px;
 }
 
@@ -147,6 +147,8 @@ ol {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-nav_link:hover,
@@ -159,10 +161,18 @@ ol {
   font-style: normal;
 }
 
+.header-contacts_list {
+  display: flex;
+  gap: 40px;
+}
+
 .header-contacts_link {
   color: var(--color-slate);
   font-size: 16px;
   line-height: 1.5;
+  display: inline-block;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-contacts_link:hover,
@@ -213,6 +223,11 @@ ol {
   padding: 120px 0;
 }
 
+.company_list {
+  display: flex;
+  gap: 24px;
+}
+
 .company_item {
   width: 264px;
 }
@@ -247,6 +262,7 @@ ol {
 
 .works_list {
   gap: 24px;
+  display: flex;
 }
 
 .team {
@@ -265,6 +281,8 @@ ol {
 }
 
 .team_list {
+  background-color: var(--color-cloud);
+  display: flex;
   gap: 24px;
 }
 
