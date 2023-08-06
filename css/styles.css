@@ -81,12 +81,12 @@ ol {
 
 .header-nav_list {
   display: flex;
-  column-gap: 40px;
+  gap: 40px;
 }
 
 .header-contacts_list {
   display: flex;
-  column-gap: 40px;
+  gap: 40px;
 }
 
 .visually-hidden {
@@ -104,23 +104,17 @@ ol {
 
 .company_list {
   display: flex;
-  column-gap: 24px;
-  margin-top: 120px;
-  margin-bottom: 120px;
+  gap: 24px;
 }
 
 .works_list {
   display: flex;
-  column-gap: 24px;
-  margin-top: 72px;
-  margin-bottom: 120px;
+  gap: 24px;
 }
 
 .team_list {
   display: flex;
-  column-gap: 24px;
-  margin-top: 72px;
-  margin-bottom: 120px;
+  gap: 24px;
 }
 
 .header-nav_logo-blue {
@@ -183,11 +177,14 @@ ol {
 
 .hero_title {
   color: var(--color-white);
+  font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
-  margin-bottom: 48px;
+  max-width: 496px;
+  text-align: center;
+  margin: 0 auto 48px;
 }
 
 .hero_button {
@@ -202,11 +199,22 @@ ol {
   display: block;
   margin: 0 auto;
   min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
 }
 
 .hero_button:hover,
 .hero_button:focus {
   background-color: var(--color-ocean);
+}
+
+.company {
+  padding: 120px 0;
+}
+
+.company_item {
+  width: 264px;
 }
 
 .company_title {
@@ -215,6 +223,7 @@ ol {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
 .company_text {
@@ -223,12 +232,21 @@ ol {
   line-height: 1.5;
 }
 
+.works {
+  padding-bottom: 120px;
+}
+
 .works_title {
   color: var(--color-navy-blue);
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
   text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.works_list {
+  gap: 24px;
 }
 
 .team {
@@ -243,6 +261,11 @@ ol {
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.team_list {
+  gap: 24px;
 }
 
 .team_item {
@@ -287,6 +310,8 @@ ol {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .footer_logo-white {
@@ -314,7 +339,7 @@ ol {
 
 .gallery-filter_list {
   display: flex;
-  column-gap: 24px;
+  gap: 24px;
   justify-content: center;
   margin-bottom: 72px;
 }
@@ -337,6 +362,9 @@ ol {
 .gallery-filter_button:focus {
   color: var(--color-white);
   background-color: var(--color-ocean);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
 }
 
 .gallery_list {
@@ -357,6 +385,7 @@ ol {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
 .gallery_text {
