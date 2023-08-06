@@ -83,9 +83,38 @@ ol {
   gap: 40px;
 }
 
+.header-nav_link {
+  color: var(--color-navy-blue);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.header-nav_link:hover,
+.header-nav_link:focus {
+  color: var(--color-ocean);
+}
+
 .header-contacts_list {
   display: flex;
   gap: 40px;
+}
+
+.header-contacts_link {
+  color: var(--color-slate);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  display: inline-block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.header-contacts_link:hover,
+.header-contacts_link:focus {
+  color: var(--color-ocean);
 }
 
 .visually-hidden {
@@ -294,7 +323,7 @@ ol {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team_wrapper {
+.team-wrapper {
   padding: 32px 0;
 }
 
@@ -353,6 +382,10 @@ ol {
 
 .gallery {
   padding: 96px 0 120px;
+}
+
+.gallery_link {
+  padding: 24px 0;
 }
 
 .gallery-filter_list {
