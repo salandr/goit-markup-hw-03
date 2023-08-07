@@ -160,15 +160,7 @@ ol {
 }
 
 .header-nav_logo-black {
-  display: flex;
-  align-items: center;
   color: var(--color-navy-blue);
-  font-family: 'Raleway', sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
 }
 
 .header-nav_link {
@@ -375,7 +367,7 @@ ol {
   color: var(--color-cloud);
   font-size: 16px;
   line-height: 1.5;
-  margin-top: 16px;
+  max-width: 264px;
 }
 
 /* Page Portfolio */
